@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
+<!---->
+<script>
+var responsiveSlider = function() {
+var slider = document.getElementById("slider");
+var sliderWidth = slider.offsetWidth;
+var slideList = document.getElementById("slideWrap");
+var count = 1;
+var items = slideList.querySelectorAll("li").length;
+var prev = document.getElementById("prev");
+var next = document.getElementById("next");
+
+window.addEventListener('resize', function() {
+  sliderWidth = slider.offsetWidth;
+});
+
+var prevSlide = function() {
+  if(count > 1) {
+    count = count - 2;
+    slideList.style.left = "-" + count * sliderWidth + "px";
+    count++;
+  }
+  else if(count = 1) {
+    count = items - 1;
+    slideList.style.left = "-" + count * sliderWidth + "px";
+    count++;
+  }
+};
+
+var nextSlide = function() {
+  if(count < items) {
+    slideList.style.left = "-" + count * sliderWidth + "px";
+    count++;
+  }
+  else if(count = items) {
+    slideList.style.left = "0px";
+    count = 1;
+  }
+};
+
+next.addEventListener("click", function() {
+  nextSlide();
+});
+
+prev.addEventListener("click", function() {
+  prevSlide();
+});
+
+setInterval(function() {
+  nextSlide()
+}, 4000);
+
+};
+
+window.onload = function() {
+responsiveSlider();  
+}
+  </script>
+</head>
+<body>
+	
+
+
+<!-- HEADER =============================-->
+<header class="item header margin-top-0">
+	<div class="wrapper">
+		<nav role="navigation" class="navbar navbar-white navbar-embossed navbar-lg navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button data-target="#navbar-collapse-02" data-toggle="collapse" class="navbar-toggle" type="button">
+					<i class="fa fa-bars"></i>
+					<span class="sr-only">Toggle navigation</span>
+					</button>
+					<a href="index.html" class="baslik"> Bilişim Sistemleri Mühendisliği</a> 
+				</div>
+				<div id="navbar-collapse-02" class="collapse navbar-collapse">
+					<ul class="navbar-brand brand">
+						<li class="propClone"><a href="index.html">Anasayfa</a></li>				
+						<li class="propClone"><a href="shop.html">Bölümümüz</a>
+							<input type="checkbox" id="drop-1"/>
+							<ul>
+								<li class="propClone"><a href="">Kurumsal</a>
+									<input type="checkbox" id="drop-1"/>
+								<ul>
+									<li class="propClone"><a href="baskanmesaj.html">Başkanın Mesajı</a></li>
+									<li class="propClone"><a href="hakkımızda.html">Hakkımızda</a></li>
+									<li class="propClone"><a href="misyonvizyon.html">Misyon - Vizyon</a></li>
+									<li class="propClone"><a href="yonetim.html">Yönetim</a></li>
+									<li class="propClone"><a href="olanaklarımız.html">Olanaklarımız</a></li>
+									<li class="propClone"><a href="anabilimdallari.html">Ana Bilim Dalları</a></li>
+									<li class="propClone"><a href="isbirlikleri.html">İşbirliklerimiz</a></li>		 
+								</ul> 
+								</li>
+								<li class="propClone"><a href="">Personel</a>
+								<input type="checkbox" id="drop-1"/>
+								<ul>
+									<li class="propClone"><a href="akademikper.html">Akademik Personel</a></li>
+									<li class="propClone"><a href="idariper.html">İdari Personel</a></li>
+								</ul> 
+								</li>
+							</ul>
+						</li>		
+						<li class="propClone"><a href="shop.html">Öğrenci</a>
+							<input type="checkbox" id="drop-1"/>
+							<ul>
+								<li class="propClone"><a href="">Genel</a>
+									<input type="checkbox" id="drop-1"/>
+								<ul>
+									<li class="propClone"><a href="http://bilsis.kocaeli.edu.tr/" target="_blank">Öğrenci Bilgi Sistemi</a></li>
+									<li class="propClone"><a href="http://odb.kocaeli.edu.tr/yonetmelik.php" target="_blank">Öğrenci İşleri Daire Başkanlığı</a></li>
+									<li class="propClone"><a href="http://odb.kocaeli.edu.tr/akademik_takvim.php" target="_blank">Akademik Takvim</a></li>
+									<li class="propClone"><a href="https://twitter.com/koubitek?lang=en" target="_blank">Bölüm Öğrenci Kulubü</a></li>
+									<li class="propClone"><a href="http://ogrkonseyi.kocaeli.edu.tr/" target="_blank">Öğrenci Konseyi</a></li>
+									<li class="propClone"><a href="http://bilisim.kocaeli.edu.tr/dosyalar/BSM-Kariyer-Danismanlari-Listesi.pdf" target="_blank">Kariyer Danışmanları</a></li>
+									<li class="propClone"><a href="http://bilisim.kocaeli.edu.tr/dosyalar/Bilisimprojeler-ogrenciprojeleri.pdf" target="_blank">Öğrenci Projeleri</a></li>					
+								</ul> 
+								</li>
+								<li class="propClone"><a href="">Bilgi Sistemi</a>
+								<input type="checkbox" id="drop-1"/>
+								<ul>
+									<li class="propClone"><a href="https://ogr.kocaeli.edu.tr/koubs/Akapers/" target="_blank">Akademik Personel Girişi</a></li>
+									<li class="propClone"><a href="http://ogr.kocaeli.edu.tr/koubs/Idaripers/anagiris.cfm" target="_blank">İdari Personel Girişi</a></li>
+									<li class="propClone"><a href="https://ogr.kocaeli.edu.tr/koubs/ogrenci/index.cfm" target="_blank">Öğrenci Girişi</a></li>
+									<li class="propClone"><a href="http://ects.kocaeli.edu.tr/index.cfm?Dilid=0&CFID=3204792&CFTOKEN=e96c57c74c6baf5e-A52F1D73-C5E8-2C16-6C6F81A746F72945" target="_blank">AKTS Bilgi Paketi</a></li>
+									<li class="propClone"><a href="http://mbs.kocaeli.edu.tr/login" target="_blank">Mezun Bilgi Sistemi</a></li>
+									<li class="propClone"><a href="http://ogr.kocaeli.edu.tr/KOUBS/Istatistik/index.cfm" target="_blank">İstatistik</a></li>						   
+								</ul> 
+								</li>
+								<li class="propClone"><a href="matbu.html">Formlar</a>
+									<input type="checkbox" id="drop-1"/>
+									<ul>
+										<li class="propClone"><a href="matbu.html">Öğrenci Dilekçe ve Formları</a></li>
+									</ul> 
+								</li>
+								<li class="propClone"><a href="">Lisans</a>
+									<input type="checkbox" id="drop-1"/>
+									<ul>
+										<li class="propClone"><a href="http://bilisim.kocaeli.edu.tr/dosyalar/bilisim_sist_muh_ders_plani.pdf" target="_blank">Ders Planı</a></li>
+										<li class="propClone"><a href="akademikper.html">Öğrenci Danışmanları</a></li>
+										<li class="propClone"><a href="lab.html">Laboratuvarlar</a></li>
+										<li class="propClone"><a href="http://bilisim.kocaeli.edu.tr/dosyalar/BSM2021-2022GUZDERSPROG.pdf" target="_blank">Ders Programı</a></li>  
+									</ul> 
+								</li>
+								<li class="propClone"><a href="">Lisans Üstü</a>
+									<input type="checkbox" id="drop-1"/>
+									<ul>
+										<li class="propClone"><a href="http://fbe.kocaeli.edu.tr/" target="_blank">Fen Bilimleri Enstitüsü</a></li>
+										<li class="propClone"><a href="calisma.html" target="_blank">Çalışma Alanları</a></li>
+										<li class="propClone"><a href="http://fbe.kocaeli.edu.tr/derskatalog.php?AKod=1ff8a7b5dc7a7d1f0ed65aaa29c04b1e" target="_blank">YL Ders Listesi</a></li>
+										<li class="propClone"><a href="http://bilisim.kocaeli.edu.tr/dosyalar/2021-2022-ISE-GraduateSyllabus.pdf" target="_blank">YL Ders Programı</a></li>
+										<li class="propClone"><a href="http://bilisim.kocaeli.edu.tr/dosyalar/Dosyalar/LisansUstu/doktora_yeterlilik_kilavuzu.pdf" target="_blank">Doktora Yeterlilik Sınavı Çalışma Konuları</a></li> 
+									</ul> 
+								</li>
+								<li class="propClone"><a href="">Öğrenci Programları</a>
+									<input type="checkbox" id="drop-1"/>
+									<ul>
+										<li class="propClone"><a href="http://int.kocaeli.edu.tr/index.php?sayfa=page&id=erasmus-ogrenim-hareketliligi-bilgi" target="_blank">Erasmus</a></li>
+										<li class="propClone"><a href="http://farabi.kocaeli.edu.tr/" target="_blank">Farabi</a></li>
+										<li class="propClone"><a href="http://odb.kocaeli.edu.tr/dosyalar/yonetmelikler/capyonetmelik200616.pdf" target="_blank">Çift Anadal Programı</a></li>							
+									</ul> 
+								</li>
+								<li class="propClone"><a href="">Anketler</a>
+									<input type="checkbox" id="drop-1"/>
+									<ul>
+										<li class="propClone"><a href="https://docs.google.com/forms/d/1sPV178IpVDKtU0SVegWr5BY2BTZ9RFehBD_ybNofFbY/viewform?edit_requested=true" target="_blank">MEZUN BİLGİ ANKETİ</a></li>
+										<li class="propClone"><a href="https://docs.google.com/forms/d/17wgeUHv02etJxbclt3IctopqFYS62wDb01sLPiL4Q9Q/viewform?edit_requested=true" target="_blank">İŞ YERİ EĞİTİMİ ÖĞRENCİ ANKETİ</a></li>
+										<li class="propClone"><a href="https://docs.google.com/forms/d/1aT08AcWmA7uF3LMFNWjDimkzr8F9vSwftbbtQLgftkM/viewform?edit_requested=true" target="_blank">İŞ YERİ EĞİTİMİ SORUMLU ANKETİ</a></li>   
+									</ul> 
+								</li>
+								
+							</ul>
+						</li>		
+						<li class="propClone"><a href="grafik.html">Sayılarla Koü</a></li>
+						<li class="propClone"><a href="shop.html">Erasmus+</a>
+							<input type="checkbox" id="drop-1"/>
+							<ul>
+								<li class="propClone"><a href="">INSTITUTIONAL</a>
+									<input type="checkbox" id="drop-1"/>
+								<ul>
+									<li class="propClone"><a href="http://bilisim.kocaeli.edu.tr/dosyalar/en/StudyPlanBachelorDegree.pdf" target="_blank">Study Plan(Bachelor's Degree)</a></li>
+									<li class="propClone"><a href="http://bilisim.kocaeli.edu.tr/dosyalar/en/StudyPlanMasterDegree.pdf" target="_blank">Study Plan(Master's Degree)</a></li>
+									<li class="propClone"><a href="http://bilisim.kocaeli.edu.tr/dosyalar/en/StudyPlanDoctorateDegree.pdf" target="_blank">Study Plan(PhD Degree)</a></li>		 
+								</ul> 
+							</ul>
+						</li>
+						<li class="propClone"><a href="iletisim.html">İletişim</a></li>		
+					</ul>
+				</div>
+				
+			</div>
+			</nav>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<div class="text-pageheader">
+							<div class="subtext-image" data-scrollreveal="enter bottom over 1.7s after 0.0s">
+								 MİSYON VE VİZYON
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+</div>
+</header>
+
+
+
+<!-- STEPS =============================-->
+<div class="item content">
+	<div class="container toparea">					<!-- /.col-md-4 col -->
+			
+				<div class="col">
+					<span class="numberstep"><i class="fa fa-info"></i></span>
+                    <h4>Misyonumuz</h4>
+					<h3 class="numbertext">Bilişim teknolojilerinin etkin kullanımıyla araştırma odaklı, yenilikçi ve uygulamaya yönelik bir eğitim-öğretim ve araştırma anlayışını benimsemektedir. Amaçlarımız doğrultusunda diğer üniversite içi ve dışından birimlerle karşılıklı faydalar gözetilerek ortak çalışmalar yapmak misyonumuzun önemli bir parçasını oluşturmaktadır. Misyonumuzun gerçekleştirilmesinde, takım çalışması, karşılıklı saygı, dürüstlük ve işe bağlılık önemli unsurlardır.</h3>
+				</div>
+                <div class="col">
+					<span class="numberstep"><i class="fa fa-info"></i></span>
+                    <h4>Vizyonumuz</h4>
+					<h3 class="numbertext">Ulusal olduğu kadar dünya ölçeğinde, bilişim teknolojileri alanında eğitim-öğretim ve araştırma konularında saygı duyulan ve tanınan bir birim olmaktır. Akademik personelimiz, çalışmalarında öğrenci odaklı olup, kültürel olarak kapsayıcı ve destekleyici bir öğrenim ortamında, örnek teşkil eden eğitim-öğretim ve pratik uygulamalara önem vermektedir.</h3>
+				</div>
+			
+		</div>
+	</div>
+</div>
+<!-- BUTTON =============================-->
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+
+<br>
+
+<!-- AREA =============================-->
+<div class="item content">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<i class="fa fa-microphone infoareaicon"></i>
+				<div class="infoareawrap">
+					<h1 class="text-center subtitle">Telefon Rehberi</h1>
+					<p class="text-center">
+						<a href="#">- Telefon Rehberi İçin Tıklayınız -</a>
+					</p>
+				</div>
+			</div>
+			<!-- /.col-md-4 col -->
+			<div class="col-md-4">
+				<i class="fa fa-user-plus infoareaicon"></i>
+				<div class="infoareawrap">
+					<h1 class="text-center subtitle">Akademik Personel</h1>
+					<p class="text-center">
+						<a href="#">- Akademik Personel İçin Tıklayınız -</a>
+					</p>
+				</div>
+			</div>
+			<!-- /.col-md-4 col -->
+			<div class="col-md-4">
+				<i class="fa fa-bullhorn infoareaicon"></i>
+				<div class="infoareawrap">
+					<h1 class="text-center subtitle">Duyurular</h1>
+					<p class="text-center">
+						<a href="#">- Duyurular İçin Tıklayınız -</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- AREA =============================-->
+<div class="item content">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<i class="fa fa-book infoareaicon"></i>
+				<div class="infoareawrap">
+					<h1 class="text-center subtitle">Öğrenci Danışmanları</h1>
+					<p class="text-center">
+						<a href="#">- Öğrenci Danışmanları İçin Tıklayınız -</a>
+					</p>
+				</div>
+			</div>
+			<!-- /.col-md-4 col -->
+			<div class="col-md-4">
+				<i class="fa fa-users infoareaicon"></i>
+				<div class="infoareawrap">
+					<h1 class="text-center subtitle">Staj Aşamaları</h1>
+					<p class="text-center">
+						<a href="#">- Staj Aşamaları İçin Tıklayınız -</a>
+					</p>
+				</div>
+			</div>
+			<!-- /.col-md-4 col -->
+			<div class="col-md-4">
+				<i class="fa fa-comments infoareaicon"></i>
+				<div class="infoareawrap">
+					<h1 class="text-center subtitle">Sıkça Sorulan Sorular</h1>
+					<p class="text-center">
+						<a href="#">- Sıkça Sorulan Sorular İçin Tıklayınız -</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- AREA =============================-->
+<div class="item content">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<i class="fa fa-briefcase infoareaicon"></i>
+				<div class="infoareawrap">
+					<h1 class="text-center subtitle">İşyeri Eğitimi</h1>
+					<p class="text-center">
+						<a href="#">- İşyeri Eğitimi İçin Tıklayınız -</a>
+					</p>
+				</div>
+			</div>
+			<!-- /.col-md-4 col -->
+			<div class="col-md-4">
+				<i class="fa fa-user-plus infoareaicon"></i>
+				<div class="infoareawrap">
+					<h1 class="text-center subtitle">Aday Öğrenci</h1>
+					<p class="text-center">
+						<a href="#">- Aday Öğrenci İçin Tıklayınız -</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- TESTIMONIAL =============================-->
+<div class="item content">
+	<div class="container">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="slide-text">
+				<div>
+					<h2><span class="uppercase">Kocaeli Üniversitesi</span></h2>
+					<img src="images/kou.png" alt="Kocaeli Üniversitesi">
+					<p>
+						Teknoloji Fakültesi 2012 yılında kuruldu, Bilişim Sistemleri Mühendisliği, Lisans ve Lisansüstü program ve öğrencilere sahiptir.
+
+						Bölümümüz, bilişim teknolojilerinin etkin kullanımıyla araştırma odaklı, yenilikçi ve uygulamaya yönelik bir eğitim-öğretim ve araştırma anlayışını benimsemektedir.
+						
+						Amaçlarımız doğrultusunda diğer üniversite içi ve dışından birimlerle karşılıklı faydalar gözetilerek ortak çalışmalar yapmak misyonumuzun önemli bir parçasını oluşturmaktadır.
+					</p>
+                    
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- CALL TO ACTION =============================-->
+<section class="content-block" style="background-color:#00bba7;">
+<div class="container text-center">
+	<div class="row">
+		<div class="col-sm-10 col-sm-offset-1">
+			<div class="item" data-scrollreveal="enter top over 0.4s after 0.1s">
+				<h1 class="callactiontitle">BAĞLANTILAR<span class="callactionbutton"><i class="fa fa-plus"></i></span>
+				</h1>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+
+
+<!-- FOOTER =============================-->
+<div class="footer text-center">
+	<div class="container">
+		<div class="row">
+			<p class="footernote">
+				 Bize Ulaşın
+			</p>
+			<ul class="social-iconsfooter">
+				<!--<li><a href="(0262) 303 10 00"><i class="fa fa-phone"></i></a></li>-->
+				<li><a href="tel:+902623031000" onclick="ga('send', 'event', { eventCategory: 'Contact', eventAction: 'Call', eventLabel: 'Mobile Button'});"><i class="fa fa-phone"></i></a></li>
+				<li><a href="https://www.facebook.com/kou92official"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://twitter.com/kou92official"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="https://plus.google.com/+kocaeliüniversitesi"><i class="fa fa-google-plus"></i></a></li>
+				<li><a href="https://www.instagram.com/kou92official/"><i class="fa fa-instagram"></i></a></li>
+			</ul>
+			<p>
+				 &copy;2021 Kocaeli Üniversitesi Bilişim Sistemleri Mühendisliği<br/>
+				Kenan Yıldız ve Ömercan Durmaz Tarafından Tasarlandı<br/>
+				Kocaeli Üniversitesi Umuttepe Yerleşkesi Teknoloji Fakültesi Bilişim Sistemleri Mühendisliği 41001, İzmit/KOCAELİ <br/>
+				+90 (262) 303 22 02
+			</p>
+		</div>
+	</div>
+</div>
+
+<!-- SCRIPTS =============================-->
+<script src="js/jquery-.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/anim.js"></script>
+<script>
+//----HOVER CAPTION---//	  
+jQuery(document).ready(function ($) {
+	$('.fadeshop').hover(
+		function(){
+			$(this).find('.captionshop').fadeIn(150);
+		},
+		function(){
+			$(this).find('.captionshop').fadeOut(150);
+		}
+	);
+});
+</script>
+	
+</body>
+</html>
